@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
+import TemperatureConverter from './TemperatureConverter';
+import TodoList from './TodoList';
+import { Container, Typography } from '@mui/material';
 import './App.css';
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <h1 className="rainbow-text">Задача 1</h1>
+      <Typography variant="h4" gutterBottom>Температурный конвертер</Typography>
+      <TemperatureConverter />
+      <h1 className="rainbow-text">Задача 2</h1>
+      <Typography variant="h4" gutterBottom style={{ marginTop: '20px' }}>Список дел</Typography>
+      <TodoList />
+    </Container>
   );
-}
+};
 
 export default App;
